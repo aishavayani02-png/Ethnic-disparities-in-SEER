@@ -16,7 +16,7 @@ library(shinyjs)
 `%||%` <- function(a, b) if (!is.null(a) && length(a) > 0 && !all(is.na(a))) a else b
 
 # ---- GitHub raw CSV URL ----
-DATA_URL <- "https://raw.githubusercontent.com/aishavayani02-png/Ethnic-disparities-in-SEER/main/data/Shiny.csv"
+DATA_URL <- "https://raw.githubusercontent.com/aishavayani02-png/Ethnic-disparities-in-SEER/main/Shiny.csv"
 # If your file is in the repo ROOT (not /data), use:
 # DATA_URL <- "https://raw.githubusercontent.com/aishavayani02-png/Ethnic-disparities-in-SEER/main/Shiny.csv"
 
