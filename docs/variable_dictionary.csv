@@ -1,0 +1,38 @@
+dataset,variable,label_or_meaning,coding_or_derivation
+SEER case export,v1,Year of diagnosis,Renamed year
+SEER case export,v2,Sex,Expected values Male or Female; recoded 1 or 2
+SEER case export,v3,Race,White=1; Black=2; Other=3; Unknown=4
+SEER case export,v4,Age at diagnosis,Age in years; 90+ represented as 90 before exclusions
+SEER case export,v5,Cancer site or subsite,Site-specific coding; appendix excluded from colon
+SEER case export,v6,Combined Summary Stage,In situ=0; Localised=1; Regional=2; Distant=3; Unknown/unstaged=4
+SEER case export,v7,SEER cause-specific death classification,Used with v8 to derive cod
+SEER case export,v8,Other-cause death classification,Used with v7 to derive cod
+SEER case export,v9,Survival months,Converted to numeric surv_mm
+SEER case export,v10,Survival months flag,Used to identify DCO/autopsy-only and zero-day survival
+SEER case export,v11,Vital status,Alive=0; Dead=1
+SEER case export,v12,Primary by international rules,Yes retained in the analysis cohort
+Population mortality export,v1,Age,Renamed age
+Population mortality export,v2,Calendar year,Renamed year
+Population mortality export,v3,Race,White=1; Black=2
+Population mortality export,v4,Sex,Male=1; Female=2
+Population mortality export,v5,Expected survival probability per million,prob=v5/1000000; rate=-ln(prob)
+Clean analysis file,year,Year of diagnosis,From v1
+Clean analysis file,sex,Sex,Male=1; Female=2
+Clean analysis file,race,Race,White=1; Black=2
+Clean analysis file,age,Age at diagnosis,Restricted to 15-89 years
+Clean analysis file,site,Cancer subsite,Site-specific numeric category
+Clean analysis file,stage,Stage at diagnosis,Localised=1; Regional=2; Distant=3
+Clean analysis file,dead,Vital status,Alive=0; Dead=1
+Clean analysis file,surv_mm,Survival time in months,0.5 months added; zero-day cases set to 0.5/30.5
+Aggregate results,site,Cancer site,One of the eight study sites
+Aggregate results,sex,Sex,Male or Female
+Aggregate results,agegroup,Age group,0=all ages; 1=<75; 2=75+; labels used in Shiny CSV
+Aggregate results,estimate,Estimate type,AD; ADa; ADb; tce; tde; tie; pm; acs; Model fit; or PP
+Aggregate results,tt,Follow-up time,Years since diagnosis from 0 to 5
+Aggregate results,PE,Point estimate,Scale depends on estimate type
+Aggregate results,lci,Lower confidence limit,95% confidence interval
+Aggregate results,uci,Upper confidence limit,95% confidence interval
+Aggregate results,race,Race stratum,White or Black for survival/model-fit estimates; otherwise blank
+Aggregate results,stage,Stage stratum,Localised; Regional; or Distant for survival/model-fit estimates
+Aggregate results,n_black,Aggregate 2022 Black cohort size,Populated only for AD/ADa/ADb rows in Shiny input
+

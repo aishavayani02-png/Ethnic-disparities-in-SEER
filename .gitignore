@@ -1,0 +1,38 @@
+# Patient-level and Stata working data
+*.dta
+*.ster
+*.gph
+*.log
+*.smcl
+work/
+data/raw/
+data/tidy/
+data/clean/
+
+# Generated documents and figures
+outputs/*
+!outputs/.gitkeep
+!outputs/tables/
+!outputs/figures/
+outputs/tables/*
+outputs/figures/*
+!outputs/tables/.gitkeep
+!outputs/figures/.gitkeep
+
+# R session and deployment metadata
+.RData
+.Rhistory
+.Rproj.user/
+rsconnect/
+shiny/rsconnect/
+
+# Credentials, environment files, and temporary Office files
+.env
+.Renviron
+*.pem
+*.key
+~$*
+
+# Local QA report; resolve before public release
+docs/validation_report.json
+

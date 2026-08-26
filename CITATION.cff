@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code or its aggregate results, please cite the associated article and this repository."
+title: "Stage at diagnosis and Black-White cancer survival disparities: analysis code"
+type: software
+version: 1.0.0
+date-released: 2026-08-26
+authors:
+  - family-names: Vayani
+    given-names: Aisha
+    orcid: "https://orcid.org/0009-0000-2093-8117"
+  - family-names: Rutherford
+    given-names: Mark
+    orcid: "https://orcid.org/0000-0003-1557-6697"
+  - family-names: Booth
+    given-names: Sarah
+    orcid: "https://orcid.org/0000-0003-1799-3144"
+repository-code: "https://github.com/aishavayani02-png/seer-stage-mediation"
+license: MIT
+
