@@ -111,17 +111,6 @@ sort site sex estimate agegroup tt
 save "$MAIN_RESULT_DIR/results_long.dta", replace
 export delimited using "$RELEASE_DIR/main/results_long.csv", replace
 
-foreach site of global ANALYSIS_SITES {
-    foreach sex in Male Female {
-        preserve
-        keep if site == "`site'" & sex == "`sex'"
-        quietly count
-        if r(N) > 0 export delimited using ///
-            "$RELEASE_DIR/main/by_site/`site'_`sex'.csv", replace
-        restore
-    }
-}
-
 * Sensitivity-analysis result files ----------------------------------------------------
 tempfile sensitivity_long
 clear
@@ -152,17 +141,6 @@ use `sensitivity_long', clear
 sort site sex estimate agegroup tt
 save "$SENS_RESULT_DIR/results_long.dta", replace
 export delimited using "$RELEASE_DIR/sensitivity/results_long.csv", replace
-
-foreach site of global ANALYSIS_SITES {
-    foreach sex in Male Female {
-        preserve
-        keep if site == "`site'" & sex == "`sex'"
-        quietly count
-        if r(N) > 0 export delimited using ///
-            "$RELEASE_DIR/sensitivity/by_site/`site'_`sex'.csv", replace
-        restore
-    }
-}
 
 * Standardised survival by race and stage ---------------------------------------------
 tempfile survival_long
@@ -215,4 +193,3 @@ export delimited using "$RELEASE_DIR/combined/Shiny.csv", replace
 copy "$RELEASE_DIR/combined/Shiny.csv" "$REPO_ROOT/shiny/data/Shiny.csv", replace
 
 display as result "Main, sensitivity, model-fit, and Shiny release files created."
-
